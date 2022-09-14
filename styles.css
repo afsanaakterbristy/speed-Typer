@@ -141,13 +141,15 @@ button {
   cursor: pointer;
 }
 
-#histories {
+/* #histories {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
+} */
 
-.card {
+  
+
+/* .card {
   width: 100%;
   height: 100%;
   padding: 50px;
@@ -165,26 +167,59 @@ button {
   );
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
+} */
+
+
+
+
+#histories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.card {
+  text-align: center;
+  padding: 20px 30px;
+  color: white;
+  border-radius: 15px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(92.49deg,
+      rgba(255, 255, 255, 0.1) 0.18%,
+      rgba(255, 255, 255, 0.05) 99.85%);
+  backdrop-filter: blur(5px);
+}
+
+/* Responsive */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  #histories {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px 20px;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #histories {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0px 15px;
+    gap: 15px;
+  }
 }
 
 #modal-background {
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    92.49deg,
-    rgba(255, 255, 255, 0.1) 0.18%,
-    rgba(255, 255, 255, 0.05) 99.85%
-  );
+  background: linear-gradient(92.49deg,
+      rgba(255, 255, 255, 0.1) 0.18%,
+      rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
   height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
 }
-
-
-/* responsive */
-
-
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
@@ -193,6 +228,6 @@ button {
 
   .card {
     flex-direction: column;
-    display: block;
+    
   }
 }
