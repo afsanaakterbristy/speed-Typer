@@ -101,6 +101,15 @@ body {
   color: white;
   margin: 20px 0;
 }
+.blog-page {
+  text-align: right;
+  color: white;
+  margin: 20px 0;
+  margin-right: 15%;
+  display: block;
+  text-decoration: none;
+
+}
 
 .divider-container {
   height: 80px;
